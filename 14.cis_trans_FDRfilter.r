@@ -25,7 +25,7 @@ for(file in transfiles){
 #    pthreshold<-1/(temp_mdna*temp_ipa)
     temp <- fread(paste0("./trans_sig/",cancer,"_TransSig.txt"))
 #    temp <- temp%>%filter(`p-value`<pthreshold)
-    temp <- temp%>%filter(FDR<0.05)
+    temp <- temp%>%filter(FDR<0.05 & `p-value`<1e-8)
     fwrite(temp,paste0("./trans_sig/",cancer,"_transfilter.txt"),sep="\t",quote=FALSE)
 }
 
@@ -53,6 +53,6 @@ for(file in transfiles){
 #    pthreshold<-1/(temp_mdna*temp_ipa)
     temp <- fread(paste0("./trans_sig/",cancer,"_TransSig_noex.txt"))
 #    temp <- temp%>%filter(pvalue<pthreshold)
-    temp <- temp%>%filter(FDR<0.05)
+    temp <- temp%>%filter(FDR<0.05 & pvalue<1e-8)
     fwrite(temp,paste0("./trans_sig/",cancer,"_transfilter_noex.txt"),sep="\t",quote=FALSE)
 }

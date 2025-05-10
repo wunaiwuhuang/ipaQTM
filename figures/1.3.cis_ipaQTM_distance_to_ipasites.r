@@ -1,5 +1,6 @@
 library(data.table)
 library(ggplot2)
+library(stringr)
 setwd("/data1/wuguojia/data/IPA_QTM_tcga/figures")
 
 # 获取符合模式的文件列表，并提取 cancer 名称
