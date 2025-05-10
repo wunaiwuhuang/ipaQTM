@@ -4,12 +4,14 @@ This project aims to explore the relationship between **DNA methylation** and **
 
 ## Project Structure
 
+``` text
 .
 ├── eQTM/ # Scripts to compute methylation sites associated with gene expression (eQTMs)
 ├── spQTM/ # Scripts to compute methylation sites associated with splicing (spQTMs)
 ├── figures/ # Final figures and summary outputs of the current analysis
 ├── *.r # Core pipeline scripts for IPA-QTM analysis
 └── README.md # Project documentatio
+```
 
 ## Description
 
